@@ -34,7 +34,7 @@ export const FeaturedAudioData = {
     </p>,
     <p key="description02">Recorded at Pura Dalem Sibetan, 16 January 2024</p>,
   ],
-  source: "assets\audio\Moonridge Mix 01 Master 01 (compressed).mp3",
+  source: "assets/audio/Moonridge Mix 01 Master 01 (compressed).mp3",
 };
 
 export const VgmDemos = [
