@@ -96,11 +96,6 @@ footer {
   align-items: center flex-start;
 }
 
-.about-photo {
-  width: 200px;
-  height: 314px;
-}
-
 .about-featuredaudio {
   flex-grow: 1;
 }
@@ -228,6 +223,10 @@ footer {
     gap: 2.5rem;
   }
 
+  .about {
+    max-width: 99%;
+  }
+
   .about-subsection {
     flex-direction: column;
     align-items: center;
@@ -249,7 +248,7 @@ footer {
   }
 
   .about-featuredaudio-player {
-    width: 200px;
+    max-width: 100%;
   }
 
   .vgm-demo {
