@@ -76,7 +76,8 @@ function SoundMap() {
       )}
 
       <APIProvider
-        apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API as string}
+        // apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API as string}
+        apiKey={process.env.map_api as string}
         key="map-api"
       >
         <div className="map-container">
@@ -85,7 +86,8 @@ function SoundMap() {
             defaultCenter={mapCenter}
             disableDefaultUI={true}
             zoomControl={true}
-            mapId={process.env.NEXT_PUBLIC_GOOGLE_MAPS_ID as string}
+            // mapId={process.env.NEXT_PUBLIC_GOOGLE_MAPS_ID as string}
+            mapId={process.env.map_id as string}
           >
             {pins}
             {infoWindowOpen && (
