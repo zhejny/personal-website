@@ -115,7 +115,7 @@ function SoundMap() {
                   <br />
                   <audio
                     src={
-                      "/assets/audio/soundmap/" +
+                      "assets/audio/soundmap/" +
                       SoundMapData[activePin].filename
                     }
                     controls
