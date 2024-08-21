@@ -73,19 +73,16 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-      - name: Load secrets to env
-        run:
-          touch .env.local
-          echo NEXT_PUBLIC_GOOGLE_MAPS_API=${{ secrets.GOOGLE_MAPS_API }} >> .env.local
-          echo NEXT_PUBLIC_GOOGLE_MAPS_ID=${{ secrets.GOOGLE_MAPS_ID }} >> .env.local
+      - name: Add Environment Variables
+        env:
+          NEXT_PUBLIC_GOOGLE_MAPS_API: ${{ secrets.GOOGLE_MAPS_API }}
+          NEXT_PUBLIC_GOOGLE_MAPS_ID: ${{ secrets.GOOGLE_MAPS_ID }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
-      - name: Test Secret
-        run: echo NEXT_PUBLIC_GOOGLE_MAPS_API
       
   # Deployment job
   deploy:
