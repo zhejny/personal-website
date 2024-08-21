@@ -24,6 +24,10 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  NEXT_PUBLIC_GOOGLE_MAPS_API: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_API }}
+  NEXT_PUBLIC_GOOGLE_MAPS_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_ID }}
+
 jobs:
   # Build job
   build:
@@ -73,10 +77,7 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-      - name: Add Environment Variables
-        env:
-          NEXT_PUBLIC_GOOGLE_MAPS_API: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_API }}
-          NEXT_PUBLIC_GOOGLE_MAPS_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_ID }}
+      - name: Test Secret
         run: echo "API KEY = $NEXT_PUBLIC_GOOGLE_MAPS_API"
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
