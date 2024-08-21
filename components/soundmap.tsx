@@ -27,9 +27,8 @@ function SoundMap() {
     }
   };
 
-  // const mapCenter = { lat: -8.409518, lng: 115.188919 }; // BALI
-  // const mapCenter = { lat: -7.980343305267712, lng: 112.6314388333177 }; // MALANG 1
-  const mapCenter = { lat: -7.92258459528211, lng: 113.00339849539344 }; // MALANG 2
+  const mapCenter = { lat: -8.409518, lng: 115.188919 }; // BALI
+  // const mapCenter = { lat: -7.92258459528211, lng: 113.00339849539344 }; // MALANG
 
   const pins = [];
 
@@ -82,7 +81,7 @@ function SoundMap() {
       >
         <div className="map-container">
           <Map
-            defaultZoom={8.25}
+            defaultZoom={10} // 8.25
             defaultCenter={mapCenter}
             disableDefaultUI={true}
             zoomControl={true}

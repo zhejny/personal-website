@@ -2,16 +2,18 @@ import React from "react";
 import FeaturedAudio from "./about-featuredaudio";
 import { FeaturedAudioData } from "@/public/lib/data";
 import Links from "./about-links";
+import Image from "next/image";
 
 function About() {
   return (
     <section className="about">
       <div className="about-subsection">
-        <img
-          className="about-photo"
-          src="..\assets\images\Bio Photo (centered).jpg"
+        <Image
+          src="/assets/images/Bio Photo (centered).jpg"
           alt=""
-        />
+          width={200}
+          height={314}
+        ></Image>
         <div className="about-bio">
           <p>
             <b>Zachary Hejny</b> is a California-born composer and performer of
@@ -42,7 +44,11 @@ function About() {
             </a>{" "}
             grant (2023). He also volunteers as Assistant Director and board
             member for{" "}
-            <a className="hyperlink" href="https://insiturecordings.org/" target="_blank">
+            <a
+              className="hyperlink"
+              href="https://insiturecordings.org/"
+              target="_blank"
+            >
               Insitu Recordings
             </a>
             , where he helps edit a digital magazine, maintain an archive of
