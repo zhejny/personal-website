@@ -10,7 +10,7 @@ function Links() {
       </h1> */}
       <a
         className="about-link"
-        href="assets\Zachary Hejny CV (2024).pdf"
+        href="assets/Zachary Hejny CV (2024).pdf"
         target="_blank"
       >
         CV
