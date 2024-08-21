@@ -1,0 +1,284 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background-color: black;
+  color: white;
+  font-size: medium;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+}
+
+main > * {
+  margin: 0 auto;
+}
+
+main:last-child {
+  margin-bottom: 3rem;
+}
+
+header {
+  position: relative;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+.header-nav {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  gap: 8rem;
+  max-width: 67%;
+}
+
+.header-link {
+  opacity: 30%;
+  font-style: bold;
+  flex-shrink: 0;
+}
+
+.header-link:hover {
+  opacity: 100%;
+  backdrop-filter: blur(0.5rem);
+  transition: opacity 0.5s;
+  transition-timing-function: ease-in;
+}
+
+.hyperlink {
+  color: rgb(20, 223, 233);
+}
+
+.hyperlink:hover {
+  color: yellow;
+  transition: color 0.1s;
+  transition-timing-function: ease-in;
+}
+
+footer {
+  z-index: 999;
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  translate: -50%;
+  backdrop-filter: blur(0rem);
+  opacity: 30%;
+  margin-top: 2rem;
+  font-size: small;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 67%;
+}
+
+.about-bio {
+  font-size: small;
+}
+
+.about-subsection {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center flex-start;
+}
+
+.about-photo {
+  width: 200px;
+  height: 314px;
+}
+
+.about-featuredaudio {
+  flex-grow: 1;
+}
+
+.about-featuredaudio > * {
+  padding-bottom: 1rem;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.about-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.about-link {
+  scale: 100%;
+  cursor: pointer;
+}
+
+.about-link:hover {
+  scale: 110%;
+  transition: scale 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.vgm-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 67%;
+}
+
+.vgm-demo {
+  display: flex;
+  gap: 1rem;
+  opacity: 30%;
+}
+
+.vgm-demo:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.vgm-demo:hover {
+  opacity: 100%;
+  transition: opacity 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.vgm-demo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vgm-demo-media {
+  text-shadow: 2xl;
+  width: 300px;
+  height: 300px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 998;
+  background: rgba(222, 213, 213, 0.8);
+}
+
+.modal-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: black;
+  padding: 14px 28px;
+  border-radius: 3px;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 7px;
+}
+
+.infowindow {
+  color: black;
+}
+
+.map-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.map-info {
+  position: fixed;
+  scale: 100%;
+  z-index: 997;
+  top: 3rem;
+  right: 3rem;
+  animation: glow 1s ease-in-out forwards infinite alternate;
+}
+
+.map-info:hover {
+  animation: none;
+  opacity: 100%;
+  scale: 125%;
+}
+
+@media (max-width: 650px) {
+  .header-nav {
+    gap: 2.5rem;
+  }
+
+  .about-subsection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-subsection > * {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .about-featuredaudio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-featuredaudio > * {
+    text-align: center;
+  }
+
+  .about-featuredaudio-player {
+    width: 200px;
+  }
+
+  .vgm-demo {
+    opacity: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vgm-demo:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .vgm-demo-text > * {
+    text-align: center;
+  }
+
+  .map-info {
+    right: 1rem;
+  }
+}
+
+@keyframes glow {
+  0% {
+    opacity: 100%;
+    scale: 125%;
+  }
+
+  100% {
+    opacity: 0%;
+    scale: 100%;
+  }
+}

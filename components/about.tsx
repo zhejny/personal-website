@@ -1,0 +1,73 @@
+import React from "react";
+import FeaturedAudio from "./about-featuredaudio";
+import { FeaturedAudioData } from "@/public/lib/data";
+import Links from "./about-links";
+
+function About() {
+  return (
+    <section className="about">
+      <div className="about-subsection">
+        <img
+          className="about-photo"
+          src="..\assets\images\Bio Photo (centered).jpg"
+          alt=""
+        />
+        <div className="about-bio">
+          <p>
+            <b>Zachary Hejny</b> is a California-born composer and performer of
+            experimental music residing in Indonesia. His work explores
+            polytemporality, incidental tuning systems, ecological sound
+            structures, and philosophies of noise. Current projects include
+            electro-acoustic instrument building using recycled materials, an
+            environmental <a>sound map</a>, a metronome app practice aid for
+            Balinese <i>kendang tunggal</i>, and various music for visual media.
+            He received a DMA in composition from UC Santa Cruz (2021) and
+            currently works as a foreign researcher at IKIP Saraswati Tabanan.
+          </p>
+          <br />
+          <p>
+            Zachary participates in various contemporary music scenes on Bali,
+            primarily as an avid student of <i>gender wayang</i>, gamelan
+            composer, and performing sound artist. Previous involvement with
+            Balinese music involves a Darmasiswa cultural immersion scholarship
+            (2012), a master's degree from ISI Denpasar (2015), numerous
+            festival commissions (including at the Bali Arts Festival in 2017),
+            and a{" "}
+            <a
+              className="hyperlink"
+              href="https://www.aminef.or.id/zachary-hejny/"
+              target="_blank"
+            >
+              Fulbright Student Research
+            </a>{" "}
+            grant (2023). He also volunteers as Assistant Director and board
+            member for{" "}
+            <a className="hyperlink" href="https://insiturecordings.org/" target="_blank">
+              Insitu Recordings
+            </a>
+            , where he helps edit a digital magazine, maintain an archive of
+            historical gamelan recordings, and document creative work by
+            emerging Balinese composers.
+          </p>
+          <br />
+          <p>
+            Email:{" "}
+            <a className="hyperlink" href="mailto:zachary.hejny@gmail.com">
+              zachary.hejny@gmail.com
+            </a>
+          </p>
+        </div>
+      </div>
+      <div className="about-subsection">
+        <div className="about-featuredaudio">
+          <FeaturedAudio {...FeaturedAudioData} />
+        </div>
+        <div className="about-links">
+          <Links />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default About;
