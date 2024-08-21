@@ -83,7 +83,7 @@ jobs:
           NEXT_PUBLIC_GOOGLE_MAPS_API: ${{ secrets.GOOGLE_MAPS_API }}
           NEXT_PUBLIC_GOOGLE_MAPS_ID: ${{ secrets.GOOGLE_MAPS_ID }}
       - name: Test Secret
-        run: echo $NEXT_PUBLIC_GOOGLE_MAPS_API
+        run: echo NEXT_PUBLIC_GOOGLE_MAPS_API
       
   # Deployment job
   deploy:
