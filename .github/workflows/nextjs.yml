@@ -85,7 +85,7 @@ jobs:
         with:
           path: ./out
       - name: Test Secret
-        run: echo "Api Key = $NEXT_PUBLIC_GOOGLE_MAPS_API"
+        run: echo ‎NEXT_PUBLIC_GOOGLE_MAPS_API‎
 
   # Deployment job
   deploy:
