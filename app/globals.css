@@ -225,6 +225,7 @@ footer {
 
   .about {
     max-width: 99%;
+    margin: 1rem;
   }
 
   .about-subsection {
@@ -253,6 +254,7 @@ footer {
 
   .vgm-list {
     max-width: 99%;
+    margin: 1rem;
   }
 
   .vgm-demo {
