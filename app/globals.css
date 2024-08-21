@@ -251,6 +251,10 @@ footer {
     max-width: 100%;
   }
 
+  .vgm-list {
+    max-width: 99%;
+  }
+
   .vgm-demo {
     opacity: 100%;
     flex-direction: column;
