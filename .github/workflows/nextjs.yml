@@ -75,8 +75,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Add Environment Variables
         env:
-          NEXT_PUBLIC_GOOGLE_MAPS_API: ${{ secrets.GOOGLE_MAPS_API }}
-          NEXT_PUBLIC_GOOGLE_MAPS_ID: ${{ secrets.GOOGLE_MAPS_ID }}
+          NEXT_PUBLIC_GOOGLE_MAPS_API: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_API }}
+          NEXT_PUBLIC_GOOGLE_MAPS_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_ID }}
         run: echo "API KEY = $NEXT_PUBLIC_GOOGLE_MAPS_API"
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
