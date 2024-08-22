@@ -4,10 +4,8 @@ import { VgmDemos } from "@/public/lib/data";
 type VgmDemoProps = (typeof VgmDemos)[number];
 
 function MediaDemo({ index, title, description, url }: VgmDemoProps) {
-  const autoFocus = (index === 0) ? true : false;
-  
   return (
-    <section className="vgm-demo" autofocus={autoFocus}>
+    <section className="vgm-demo">
       {/* Title & Description */}
       <div className="vgm-demo-text">
         <h1 className="text-xl font-bold">{title}</h1>
