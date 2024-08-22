@@ -20,6 +20,7 @@ canvas {
 
 main > * {
   margin: 0 auto;
+  flex: 1;
 }
 
 main:last-child {
