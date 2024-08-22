@@ -116,37 +116,33 @@ footer {
 }
 
 .about-link {
-  scale: 100%;
   cursor: pointer;
+  transition: scale 0.5s ease-in-out;
 }
 
 .about-link:hover {
   scale: 110%;
-  transition: scale 0.5s;
-  transition-timing-function: ease-in-out;
 }
 
 .vgm-list {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
   max-width: 67%;
 }
 
 .vgm-demo {
   display: flex;
   gap: 1rem;
-  opacity: 30%;
+  transition: scale 0.5s ease-in-out;
 }
 
 .vgm-demo:nth-child(even) {
   flex-direction: row-reverse;
 }
 
-.vgm-demo:focus {
-  opacity: 100%;
-  transition: opacity 0.5s;
-  transition-timing-function: ease-in-out;
+.vgm-demo:hover {
+  scale: 105%;
 }
 
 .vgm-demo-text {
