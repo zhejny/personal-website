@@ -48,13 +48,12 @@ header {
   opacity: 30%;
   font-style: bold;
   flex-shrink: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .header-link:hover {
   opacity: 100%;
   backdrop-filter: blur(0.5rem);
-  transition: opacity 0.5s;
-  transition-timing-function: ease-in;
 }
 
 .hyperlink {
