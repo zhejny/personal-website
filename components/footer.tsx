@@ -1,5 +1,6 @@
 import React from "react";
 
 export default function Footer() {
-  return <footer>&copy; 2024 Zachary Hejny</footer>;
+  const currentYear = new Date().getFullYear();
+  return <footer>&copy; {currentYear} Zachary Hejny</footer>;
 }
