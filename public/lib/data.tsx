@@ -63,7 +63,7 @@ export const VgmDemos = [
         sample libraries. Listen with headphones or stereo monitors.
       </p>
     ),
-    url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1842729327",
+    url: "https://soundcloud.com/user-451077542-512805099/beji",
   },
   // {
   //   index: 2,
