@@ -10,12 +10,8 @@ export const metadata: Metadata = {
   title: "Zachary Hejny | Composer",
   description: '(>")>',
   icons: {
-    icon: [
-      'assets/icons/favicon.ico'
-    ],
-    apple: [
-      'assets/icons/apple-touch-icon.png'
-    ],
+    icon: '/icons/favicon.ico',
+    apple: '/icons/apple-touch-icon.png'.
   },
   manifest: '/site.webmanifest'
 };
