@@ -9,7 +9,7 @@ function About() {
     <section className="about">
       <div className="about-subsection">
         <Image
-          src="assets/images/Bio Photo (centered).jpg"
+          src="/assets/images/Bio Photo (centered).jpg"
           alt=""
           width={200}
           height={314}
