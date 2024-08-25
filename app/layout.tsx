@@ -9,6 +9,15 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Zachary Hejny | Composer",
   description: '(>")>',
+  icons: {
+    icon: [
+      'assets/icons/favicon.ico'
+    ],
+    apple: [
+      'assets/icons/apple-touch-icon.png'
+    ],
+  },
+  manifest: '/site.webmanifest'
 };
 
 export default function RootLayout({
