@@ -44,11 +44,7 @@ export const VgmDemos = [
     description: (
       <p>
         A growing collection of short loops exploring the hardware limitations
-        of sound chips from old video game systems. Composed using{" "}
-        <a className="hyperlink" href="https://famitracker.com" target="_blank">
-          FamiTracker
-        </a>
-        .
+        of sound chips from old video game systems. Composed using FamiTracker.
       </p>
     ),
     url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1842729327",
@@ -58,8 +54,8 @@ export const VgmDemos = [
     title: "Digital Ecosystems",
     description: (
       <p>
-        A growing collection of soundscapes evoking imaginary ecologies. All
-        sounds created in SuperCollider using custom synthesizers and original
+        A growing collection of soundscapes that evoke imaginary ecologies. All
+        sounds were created in SuperCollider using custom synthesizers and original
         sample libraries. Listen with headphones or stereo monitors.
       </p>
     ),

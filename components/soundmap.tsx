@@ -47,7 +47,7 @@ function SoundMap() {
         </AdvancedMarker>
       </div>
     );
-  };
+  }
 
   console.log(process.env.NEXT_PUBLIC_GOOGLE_MAPS_API);
 
@@ -63,12 +63,12 @@ function SoundMap() {
           <div className="modal-content">
             <h1 className="font-semibold pb-2">Sound Map</h1>
             <p className="text-gray-400">
-              This map hosts a diary of field recordings made beginning on New
-              Years' Eve 2023. It allows me to document and share special
-              moments from life, especially where sound becomes an important
-              element of the experience. The entries are primarily located in
-              Indonesia where I reside, but I hope to travel and widen this
-              scope. All audio was made using the Zoom H3-VR field recorder.
+              This map acts as a diary of field recordings. It allows me to
+              document and share special moments from life, especially where
+              sound was an important element of the experience. The entries are
+              primarily located in Indonesia where I reside, but I hope to widen
+              this scope. All audio was recorded using the Zoom H3-VR field
+              recorder.
             </p>
             <button className="close-modal" onClick={() => setModalOpen(false)}>
               <FaRegWindowClose />

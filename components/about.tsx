@@ -24,16 +24,16 @@ function About() {
             environmental <a>sound map</a>, a metronome app practice aid for
             Balinese <i>kendang tunggal</i>, and various music for visual media.
             He received a DMA in composition from UC Santa Cruz (2021) and
-            currently works as a foreign researcher at IKIP Saraswati Tabanan.
+            currently works as a guest researcher at IKIP Saraswati Tabanan.
           </p>
           <br />
           <p>
             Zachary participates in various contemporary music scenes on Bali,
-            primarily as an avid student of <i>gender wayang</i>, gamelan
+            primarily as an avid student of <i>gender wayang</i>, a gamelan
             composer, and performing sound artist. Previous involvement with
-            Balinese music involves a Darmasiswa cultural immersion scholarship
+            Balinese music includes a Darmasiswa cultural immersion scholarship
             (2012), a master's degree from ISI Denpasar (2015), numerous
-            festival commissions (including at the Bali Arts Festival in 2017),
+            festival commissions (including the Bali Arts Festival in 2017),
             and a{" "}
             <a
               className="hyperlink"
