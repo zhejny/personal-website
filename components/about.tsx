@@ -29,7 +29,7 @@ function About() {
           <br />
           <p>
             Zachary participates in various contemporary music scenes on Bali,
-            primarily as an avid student of <i>gender wayang</i>, a gamelan
+            primarily as an avid student of <i>gender wayang</i>, gamelan
             composer, and performing sound artist. Previous involvement with
             Balinese music includes a Darmasiswa cultural immersion scholarship
             (2012), a master's degree from ISI Denpasar (2015), numerous
