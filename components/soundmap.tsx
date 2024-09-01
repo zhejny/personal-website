@@ -49,8 +49,6 @@ function SoundMap() {
     );
   }
 
-  console.log(process.env.NEXT_PUBLIC_GOOGLE_MAPS_API);
-
   return (
     <section>
       {modalOpen && (
