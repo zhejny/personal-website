@@ -33,27 +33,12 @@ function About() {
             composer, and performing sound artist. Previous involvement with
             Balinese music includes a Darmasiswa cultural immersion scholarship
             (2012), a master's degree from ISI Denpasar (2015), numerous
-            festival commissions (including the Bali Arts Festival in 2017),
-            and a{" "}
-            <a
-              className="hyperlink"
-              href="https://www.aminef.or.id/zachary-hejny/"
-              target="_blank"
-            >
-              Fulbright Student Research
-            </a>{" "}
-            grant (2023). He also volunteers as Assistant Director and board
-            member for{" "}
-            <a
-              className="hyperlink"
-              href="https://insiturecordings.org/"
-              target="_blank"
-            >
-              Insitu Recordings
-            </a>
-            , where he helps edit a digital magazine, maintain an archive of
-            historical gamelan recordings, and document creative work by
-            emerging Balinese composers.
+            festival commissions (including the Bali Arts Festival in 2017), and
+            a Fulbright Student Research grant (2023). He also volunteers as
+            Assistant Director and board member for Insitu Recordings, where he
+            helps edit a digital magazine, maintain an archive of historical
+            gamelan recordings, and document creative work by emerging Balinese
+            composers.
           </p>
           <br />
           <p>
