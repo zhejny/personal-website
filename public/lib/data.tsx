@@ -7,10 +7,10 @@ export const HeaderLinks = [
     name: "About",
     path: "about",
   },
-  {
-    name: "VGM",
-    path: "vgm",
-  },
+  // {
+  //   name: "VGM",
+  //   path: "vgm",
+  // },
   {
     name: "Sound Map",
     path: "sound-map",
