@@ -22,13 +22,13 @@ function Links() {
       >
         <FaGithub />
       </a>
-      {/* <a
+      {<a
         className="about-link pt-[0.225rem]"
-        href="https://www.instagram.com/z_d_v_h/"
+        href="https://www.instagram.com/acorn_algebra/"
         target="_blank"
       >
         <FaInstagram />
-      </a> */}
+      </a>}
     </section>
   );
 }
