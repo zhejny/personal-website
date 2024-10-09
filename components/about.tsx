@@ -21,10 +21,17 @@ function About() {
             polytemporality, incidental tuning systems, ecological sound
             structures, and philosophies of noise. Current projects include
             electro-acoustic instrument building using recycled materials, an
-            environmental <a>sound map</a>, a metronome app practice aid for
-            Balinese <i>kendang tunggal</i>, and various music for visual media.
-            He received a DMA in composition from UC Santa Cruz (2021) and
-            currently works as a guest researcher at IKIP Saraswati Tabanan.
+            environmental{" "}
+            <a
+              className="hyperlink"
+              href="https://www.zacharyhejny.com/sound-map"
+            >
+              sound map
+            </a>
+            , a metronome app practice aid for Balinese <i>kendang tunggal</i>,
+            and various music for visual media. He received a DMA in composition
+            from UC Santa Cruz (2021) and currently works as a guest researcher
+            at IKIP Saraswati Tabanan.
           </p>
           <br />
           <p>
