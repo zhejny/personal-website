@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useEffect, useState } from "react";
 import {
   APIProvider,
@@ -27,8 +27,8 @@ function SoundMap() {
     }
   };
 
-  const mapCenter = { lat: -8.409518, lng: 115.188919 }; // BALI
-  // const mapCenter = { lat: -7.92258459528211, lng: 113.00339849539344 }; // MALANG
+  // const mapCenter = { lat: -8.409518, lng: 115.188919 }; // BALI
+  const mapCenter = { lat: -7.92258459528211, lng: 113.00339849539344 }; // MALANG
 
   const pins = [];
 
@@ -61,12 +61,11 @@ function SoundMap() {
           <div className="modal-content">
             <h1 className="font-semibold pb-2">Sound Map</h1>
             <p className="text-gray-400">
-              This map acts as a diary of field recordings. It allows me to
-              document and share special moments from life, especially where
-              sound was an important element of the experience. The entries are
-              primarily located in Indonesia where I reside, but I hope to widen
-              this scope. All audio was recorded using the Zoom H3-VR field
-              recorder.
+              This map hosts my diary of environmental field recordings. I use
+              it to document and share moments from life where sound magnified
+              the experience. Currently, all the map entries are located in
+              Indonesia where I reside, but I hope to widen this scope. All
+              audio was recorded using the Zoom H3-VR field recorder.
             </p>
             <button className="close-modal" onClick={() => setModalOpen(false)}>
               <FaRegWindowClose />

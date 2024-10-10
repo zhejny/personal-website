@@ -149,4 +149,32 @@ export const SoundMapData = [
     description: "Pitch black: bugs, frogs, dogs",
     filename: "05_240311_Nyepi (night).mp3",
   },
+  {
+    entry: "6",
+    location: "Institut Seni Indonesia, Surakarta",
+    coordinates: {
+      lat: -7.559663803752596,
+      lng: 110.85303060777582,
+    },
+    direction: "east",
+    date: "30-Jul-24",
+    time: "1245 WIB",
+    occasion: "First visit to ISI Solo",
+    description: "Birds, choir class practicing, distant mosque prayer then nearby mosque prayer, occasional passers-by, motorbikes",
+    filename: "06_240730_ISI Solo.mp3",
+  },
+  {
+    entry: "7",
+    location: "Denpasar Aiport",
+    coordinates: {
+      lat: -8.745012838217642,
+      lng: 115.16231524620589,
+    },
+    direction: "north",
+    date: "24-Jul-24",
+    time: "1155 WITA",
+    occasion: "Waiting for flight to Jogja",
+    description: "People, airport announcements",
+    filename: "07_240728_Denpasar Airport.mp3",
+  },
 ];
