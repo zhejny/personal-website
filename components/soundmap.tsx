@@ -80,7 +80,7 @@ function SoundMap() {
       >
         <div className="map-container">
           <Map
-            defaultZoom={8.5}
+            defaultZoom={8.25}
             defaultCenter={mapCenter}
             disableDefaultUI={true}
             zoomControl={true}

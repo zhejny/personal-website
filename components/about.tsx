@@ -11,8 +11,8 @@ function About() {
         <Image
           src="/assets/images/retina.jpg"
           alt=""
-          width={250} // 200
-          height={250} // 314
+          width={200} // 200
+          height={200} // 314
         ></Image>
         <div className="about-bio">
           <p>
