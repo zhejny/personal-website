@@ -8,13 +8,13 @@ function Links() {
       {/* <h1>
         <u>More Information: </u>
       </h1> */}
-      <a
+      {/* <a
         className="about-link"
         href="assets/Zachary Hejny CV (2024).pdf"
         target="_blank"
       >
         CV
-      </a>
+      </a> */}
       <a
         className="about-link pt-[0.225rem]"
         href="https://github.com/zhejny"
