@@ -24,7 +24,7 @@ function Links() {
       </a>
       {<a
         className="about-link pt-[0.225rem]"
-        href="https://www.instagram.com/acorn_algebra/"
+        href="https://www.instagram.com/acorn.algebra/"
         target="_blank"
       >
         <FaInstagram />
