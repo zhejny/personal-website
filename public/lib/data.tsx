@@ -3,10 +3,10 @@ export const HeaderLinks = [
     name: <text>&#x2698;</text>,
     path: "/",
   },
-  {
-    name: "About",
-    path: "about",
-  },
+  // {
+  //   name: "About",
+  //   path: "about",
+  // },
   // {
   //   name: "VGM",
   //   path: "vgm",
