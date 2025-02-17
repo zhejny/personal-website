@@ -61,11 +61,7 @@ function SoundMap() {
           <div className="modal-content">
             <h1 className="font-semibold pb-2">Sound Map</h1>
             <p className="text-gray-400">
-              This map hosts my diary of environmental field recordings. I use
-              it to document and share moments from life where sound magnified
-              the experience. Currently, all the map entries are located in
-              Indonesia where I reside, but I hope to widen this scope. All
-              audio was recorded using the Zoom H3-VR field recorder.
+              A map database of environmental field recordings documenting sonic experiences from my life. All audio was recorded using the Zoom H3-VR field recorder.
             </p>
             <button className="close-modal" onClick={() => setModalOpen(false)}>
               <FaRegWindowClose />
