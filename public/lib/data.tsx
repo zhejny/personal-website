@@ -12,7 +12,7 @@ export const HeaderLinks = [
   //   path: "vgm",
   // },
   {
-    name: "Sound Map",
+    name: "map",
     path: "sound-map",
   },
 ];
