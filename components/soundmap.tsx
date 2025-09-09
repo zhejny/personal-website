@@ -61,7 +61,8 @@ function SoundMap() {
           <div className="modal-content">
             <h1 className="font-semibold pb-2">Sound Map</h1>
             <p className="text-gray-400">
-              A map database of environmental field recordings documenting sonic experiences from my life. All audio was recorded using the Zoom H3-VR field recorder.
+              A prototype collection of environmental field recordings documenting sonic experiences from my life. All audio was recorded myself using the Zoom H3-VR field recorder, unless otherwise noted. The audio on this map are stereo-mixdowns of 4-channel recordings, and I hope to implement spatial ambisonic audio soon.
+
             </p>
             <button className="close-modal" onClick={() => setModalOpen(false)}>
               <FaRegWindowClose />

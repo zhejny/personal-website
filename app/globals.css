@@ -185,6 +185,7 @@ footer {
   top: 10px;
   right: 10px;
   padding: 5px 7px;
+  color: white;
 }
 
 .infowindow {
@@ -205,6 +206,7 @@ footer {
   z-index: 997;
   top: 3rem;
   right: 3rem;
+  color: white;
   animation: glow 1s ease-in-out forwards infinite alternate;
 }
 
