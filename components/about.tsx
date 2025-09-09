@@ -56,14 +56,14 @@ function About() {
           </p>
         </div>
       </div>
-      <div className="about-subsection">
+      {/* <div className="about-subsection">
         <div className="about-featuredaudio">
           <FeaturedAudio {...FeaturedAudioData} />
         </div>
         <div className="about-links">
           <Links />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

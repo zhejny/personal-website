@@ -12,7 +12,7 @@ import { FaInfo, FaRegWindowClose } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 function SoundMap() {
-  const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(true);
   const [infoWindowOpen, setInfoWindowOpen] = useState(false);
   const [activePin, setActivePin] = useState(0);
 
