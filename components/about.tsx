@@ -8,12 +8,12 @@ function About() {
   return (
     <section className="about">
       <div className="about-subsection">
-        <Image
+        {/* <Image
           src="/assets/images/retina.jpg"
           alt=""
           width={200} // 200
           height={200} // 314
-        ></Image>
+        ></Image> */}
         <div className="about-bio">
           <p>
             <b>Zachary Hejny</b> is a California-born composer and performer of
@@ -21,17 +21,10 @@ function About() {
             polytemporality, incidental tuning systems, ecological sound
             structures, and philosophies of noise. Current projects include
             electro-acoustic instrument building using recycled materials, an
-            environmental{" "}
-            <a
-              className="hyperlink"
-              href="https://www.zacharyhejny.com/sound-map"
-            >
-              sound map
-            </a>
-            , a metronome app practice aid for Balinese <i>kendang tunggal</i>,
+            environmental sound map, a metronome app practice aid for Balinese <i>kendang tunggal</i>,
             and various music for visual media. He received a DMA in composition
             from UC Santa Cruz (2021) and currently works as a guest researcher
-            at IKIP Saraswati Tabanan.
+            at IKIP Saraswati Tabanan in Bali.
           </p>
           <br />
           <p>
