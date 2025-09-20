@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import useWindowDimensions from "./hooks";
 import {
   APIProvider,
   Map,
@@ -26,6 +27,8 @@ function SoundMap() {
       setModalOpen(false);
     }
   };
+
+  const { height, width } = useWindowDimensions();
 
   // const mapCenter = { lat: -8.409518, lng: 115.188919 }; // BALI
   const mapCenter = { lat: -7.92258459528211, lng: 113.00339849539344 }; // MALANG

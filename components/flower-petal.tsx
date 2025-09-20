@@ -96,7 +96,7 @@ export class Petal {
     );
     context.fillStyle = this.rgbaString(this.color);
     context.fill();
-    context.strokeStyle = "white";
+    context.strokeStyle = "white"; // this.rgbaString(this.color)
     context.stroke();
     context.closePath();
   }
