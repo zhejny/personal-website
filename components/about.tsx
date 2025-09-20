@@ -9,7 +9,7 @@ function About() {
     <section className="about">
       <div className="about-subsection">
         <Image
-          src="/assets/images/taiwan train station.jpg"
+          src="/assets/images/glitch.png"
           alt=""
           width={400} // 200
           height={300} // 314
