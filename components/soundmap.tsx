@@ -29,7 +29,8 @@ function SoundMap() {
 
  
   // const mapCenter = { lat: -8.409518, lng: 115.188919 }; // BALI
-  const mapCenter = { lat: -7.92258459528211, lng: 113.00339849539344 }; // MALANG
+  const mapCenter = { lat: 21.02850299804771, lng: 105.8572184522525 }; // HANOI
+  //const mapCenter = { lat: -7.92258459528211, lng: 113.00339849539344 }; // MALANG
 
   const pins = [];
 
@@ -78,7 +79,7 @@ function SoundMap() {
       >
         <div className="map-container">
           <Map
-            defaultZoom={8.25}
+            defaultZoom={7}
             defaultCenter={mapCenter}
             disableDefaultUI={true}
             zoomControl={true}
