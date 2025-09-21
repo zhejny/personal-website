@@ -177,4 +177,32 @@ export const SoundMapData = [
     description: "People, airport announcements",
     filename: "07_240728_Denpasar Airport.mp3",
   },
+  {
+    entry: "8",
+    location: "Colombo Fort Station",
+    coordinates: {
+      lat: 6.933924201915475,
+      lng: 79.85006845437603,
+    },
+    direction: "north",
+    date: "14-Oct-24",
+    time: "0624 SLST",
+    occasion: "recorded by Daniel Smither on a OnePlus 12",
+    description: "train arrival, announcements",
+    filename: "08_241012_Colombo Fort Station.mp3",
+  },
+  {
+    entry: "9",
+    location: "Seoul Train Crossing",
+    coordinates: {
+      lat: 37.562430131256804,
+      lng: 126.96873011193591,
+    },
+    direction: "north",
+    date: "10-Sep-25",
+    time: "1448 KST",
+    occasion: "resting after lunch",
+    description: "train signal, guard whistle, train crossing",
+    filename: "09_250910_Seoul Train Crossing.mp3",
+  },
 ];
