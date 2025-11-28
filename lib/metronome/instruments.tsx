@@ -13,8 +13,8 @@ export const instruments: InstrumentCollection = {
   gong: {
     imgSrc: "/assets/images/metronome/gong.png",
     samplePaths: [
-      "/assets/audio/metronome/gong_wadon.wav",
-      "/assets/audio/metronome/gong_lanang.wav",
+      "/assets/audio/metronome/gong_wadon.mp3",
+      "/assets/audio/metronome/gong_lanang.mp3",
     ],
     defaultAmp: 1,
     pan: -0.2,
@@ -23,7 +23,7 @@ export const instruments: InstrumentCollection = {
   },
   klentong: {
     imgSrc: "/assets/images/metronome/klentong.png",
-    samplePaths: ["/assets/audio/metronome/klentong.wav"],
+    samplePaths: ["/assets/audio/metronome/klentong.mp3"],
     defaultAmp: 1,
     pan: -0.1,
     highpass: 100,
@@ -31,7 +31,7 @@ export const instruments: InstrumentCollection = {
   },
   kempur: {
     imgSrc: "/assets/images/metronome/kempur.png",
-    samplePaths: ["/assets/audio/metronome/kempur.wav"],
+    samplePaths: ["/assets/audio/metronome/kempur.mp3"],
     defaultAmp: 1,
     pan: -0.15,
     highpass: 60,
@@ -39,7 +39,7 @@ export const instruments: InstrumentCollection = {
   },
   klenang: {
     imgSrc: "/assets/images/metronome/klenang.png",
-    samplePaths: ["/assets/audio/metronome/klenang.wav"],
+    samplePaths: ["/assets/audio/metronome/klenang.mp3"],
     defaultAmp: 1,
     pan: +0.15,
     highpass: 300,
@@ -47,7 +47,7 @@ export const instruments: InstrumentCollection = {
   },
   kempli: {
     imgSrc: "/assets/images/metronome/kempli.png",
-    samplePaths: ["/assets/audio/metronome/kempli.wav"],
+    samplePaths: ["/assets/audio/metronome/kempli.mp3"],
     defaultAmp: 1,
     pan: +0.1,
     highpass: 200,
@@ -55,7 +55,7 @@ export const instruments: InstrumentCollection = {
   },
   gentorag: {
     imgSrc: "/assets/images/metronome/gentorag.png",
-    samplePaths: ["/assets/audio/metronome/gentorag.wav"],
+    samplePaths: ["/assets/audio/metronome/gentorag.mp3"],
     defaultAmp: 1,
     pan: +0.25,
     highpass: 200,
@@ -64,9 +64,9 @@ export const instruments: InstrumentCollection = {
   kecek: {
     imgSrc: "/assets/images/metronome/kecek.png",
     samplePaths: [
-      "/assets/audio/metronome/kecek_right.wav",
-      "/assets/audio/metronome/kecek_left.wav",
-      "/assets/audio/metronome/kecek_right_loud.wav",
+      "/assets/audio/metronome/kecek_right.mp3",
+      "/assets/audio/metronome/kecek_left.mp3",
+      "/assets/audio/metronome/kecek_right_loud.mp3",
     ],
     defaultAmp: 1,
     pan: +0.4,
@@ -76,13 +76,13 @@ export const instruments: InstrumentCollection = {
   jublag: {
     imgSrc: "/assets/images/metronome/jublag.png",
     samplePaths: [
-      "/assets/audio/metronome/jublag_01.wav",
-      "/assets/audio/metronome/jublag_02.wav",
-      "/assets/audio/metronome/jublag_03.wav",
-      "/assets/audio/metronome/jublag_04.wav",
-      "/assets/audio/metronome/jublag_05.wav",
-      "/assets/audio/metronome/jublag_06.wav",
-      "/assets/audio/metronome/jublag_07.wav",
+      "/assets/audio/metronome/jublag_01.mp3",
+      "/assets/audio/metronome/jublag_02.mp3",
+      "/assets/audio/metronome/jublag_03.mp3",
+      "/assets/audio/metronome/jublag_04.mp3",
+      "/assets/audio/metronome/jublag_05.mp3",
+      "/assets/audio/metronome/jublag_06.mp3",
+      "/assets/audio/metronome/jublag_07.mp3",
     ],
     defaultAmp: 0.5,
     pan: -0.3,
@@ -92,13 +92,13 @@ export const instruments: InstrumentCollection = {
   jegogan: {
     imgSrc: "/assets/images/metronome/jegogan.png",
     samplePaths: [
-      "/assets/audio/metronome/jegogan_01.wav",
-      "/assets/audio/metronome/jegogan_02.wav",
-      "/assets/audio/metronome/jegogan_03.wav",
-      "/assets/audio/metronome/jegogan_04.wav",
-      "/assets/audio/metronome/jegogan_05.wav",
-      "/assets/audio/metronome/jegogan_06.wav",
-      "/assets/audio/metronome/jegogan_07.wav",
+      "/assets/audio/metronome/jegogan_01.mp3",
+      "/assets/audio/metronome/jegogan_02.mp3",
+      "/assets/audio/metronome/jegogan_03.mp3",
+      "/assets/audio/metronome/jegogan_04.mp3",
+      "/assets/audio/metronome/jegogan_05.mp3",
+      "/assets/audio/metronome/jegogan_06.mp3",
+      "/assets/audio/metronome/jegogan_07.mp3",
     ],
     defaultAmp: 0.5,
     pan: -0.35,
