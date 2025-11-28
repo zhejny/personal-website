@@ -1,18 +1,17 @@
+"use client"
 import React from "react";
-import FeaturedAudio from "./about-featuredaudio";
-import { FeaturedAudioData } from "@/public/lib/data";
-import Links from "./about-links";
 import Image from "next/image";
+
 
 function About() {
   return (
     <section className="about">
       <div className="about-subsection">
         <Image
-          src="/assets/images/glitch.png"
+          src="/assets/images/pindekan and megaphone.jpg"
           alt=""
-          width={400} // 200
           height={300} // 314
+          width={200}
         ></Image>
         <div className="about-bio">
           <p>
@@ -23,24 +22,10 @@ function About() {
             electro-acoustic instrument building using recycled materials, an
             environmental sound map, a metronome app practice aid for Balinese <i>kendang tunggal</i>,
             and various music for visual media. He received a DMA in composition
-            from UC Santa Cruz (2021) and currently works as a performing arts researcher
+            from UC Santa Cruz (2021) and currently works as a visiting performing arts researcher
             at IKIP Saraswati in Bali and Assistant Director of Insitu Recordings.
           </p>
           <br />
-          {/* <p>
-            Zachary participates in various contemporary music scenes on Bali,
-            primarily as an avid student of <i>gender wayang</i>, gamelan
-            composer, and performing sound artist. Previous involvement with
-            Balinese music includes a Darmasiswa cultural immersion scholarship
-            (2012), a master's degree from ISI Denpasar (2015), numerous
-            festival commissions (including the Bali Arts Festival in 2017), and
-            a Fulbright Student Research grant (2023). He also volunteers as
-            Assistant Director and board member for Insitu Recordings, where he
-            helps edit a digital magazine, maintain an archive of historical
-            gamelan recordings, and document creative work by emerging Balinese
-            composers.
-          </p>
-          <br /> */}
           <p>
             Email:{" "}
             <a className="hyperlink" href="mailto:zachary.hejny@gmail.com">
@@ -49,14 +34,6 @@ function About() {
           </p>
         </div>
       </div>
-      {/* <div className="about-subsection">
-        <div className="about-featuredaudio">
-          <FeaturedAudio {...FeaturedAudioData} />
-        </div>
-        <div className="about-links">
-          <Links />
-        </div>
-      </div> */}
     </section>
   );
 }

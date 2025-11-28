@@ -15,27 +15,11 @@ export const HeaderLinks = [
     name: "map",
     path: "sound-map",
   },
+  {
+    name: "metronome",
+    path: "metronome"
+  }
 ];
-
-export const FeaturedAudioData = {
-  data: [
-    <div key="title">
-      <b>"Moonridge"</b>
-    </div>,
-    <p key="description01">
-      Commissioned and performed by{" "}
-      <a
-        className="hyperlink"
-        href="https://www.instagram.com/selonding_baliaga/"
-        target="_blank"
-      >
-        Selonding Bali Aga
-      </a>
-    </p>,
-    <p key="description02">Recorded at Pura Dalem Sibetan, 16 January 2024</p>,
-  ],
-  source: "assets/audio/Moonridge Mix 01 Master 01 (compressed).mp3",
-};
 
 export const VgmDemos = [
   {
