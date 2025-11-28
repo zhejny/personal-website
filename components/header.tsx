@@ -1,6 +1,6 @@
 import React from "react";
-import { HeaderLinks } from "@/public/lib/data";
 import Link from "next/link";
+import { HeaderLinks } from "@/lib/HeaderLinks";
 
 function Header() {
   return (

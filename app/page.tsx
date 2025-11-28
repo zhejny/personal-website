@@ -1,4 +1,4 @@
-import Flower from "@/components/flower";
+import Flower from "@/components/flower/flower";
 
 export default function Home() {
   return (

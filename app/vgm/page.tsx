@@ -1,5 +1,5 @@
 import React from "react";
-import VgmList from "@/components/vgm-list";
+import VgmList from "@/components/vgm/vgm-list";
 
 function VgmPage() {
   return (

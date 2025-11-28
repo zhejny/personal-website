@@ -1,4 +1,21 @@
-export const SoundMapPins = [
+export type Coordinates = {
+  lat: number;
+  lng: number;
+}
+
+export type SoundMapPin = {
+  entry: string;
+  location: string;
+  coordinates: Coordinates;
+  direction: string;
+  date: string;
+  time: string;
+  occasion: string;
+  description: string;
+  filename: string;
+}
+
+export const SoundMapPins: SoundMapPin[] = [
   {
     entry: "1",
     location: "Batungsel, Tabanan",

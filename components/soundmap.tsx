@@ -7,9 +7,9 @@ import {
   Pin,
   InfoWindow,
 } from "@vis.gl/react-google-maps";
-import { SoundMapData } from "@/public/lib/data";
 import { FaInfo, FaRegWindowClose } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { SoundMapPins } from "@/lib/sound map/pins";
 
 function SoundMap() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -35,8 +35,8 @@ function SoundMap() {
 
   const pins = [];
 
-  for (let i = 0; i < SoundMapData.length; i++) {
-    const pin = SoundMapData[i];
+  for (let i = 0; i < SoundMapPins.length; i++) {
+    const pin = SoundMapPins[i];
     pins.push(
       <div key={i}>
         <AdvancedMarker
@@ -89,31 +89,31 @@ function SoundMap() {
             {pins}
             {infoWindowOpen && (
               <InfoWindow
-                position={SoundMapData[activePin].coordinates}
+                position={SoundMapPins[activePin].coordinates}
                 onCloseClick={() => setInfoWindowOpen(false)}
               >
                 <div className="infowindow">
                   <p>
-                    <b>Location:</b> {SoundMapData[activePin].location}
+                    <b>Location:</b> {SoundMapPins[activePin].location}
                   </p>
                   <p>
-                    <b>Date:</b> {SoundMapData[activePin].date}
+                    <b>Date:</b> {SoundMapPins[activePin].date}
                   </p>
                   <p>
-                    <b>Time:</b> {SoundMapData[activePin].time}
+                    <b>Time:</b> {SoundMapPins[activePin].time}
                   </p>
                   <p>
                     <b>Recording Occasion:</b>{" "}
-                    {SoundMapData[activePin].occasion}
+                    {SoundMapPins[activePin].occasion}
                   </p>
                   <p>
-                    <b>Description:</b> {SoundMapData[activePin].description}
+                    <b>Description:</b> {SoundMapPins[activePin].description}
                   </p>
                   <br />
                   <audio
                     src={
                       "assets/audio/soundmap/" +
-                      SoundMapData[activePin].filename
+                      SoundMapPins[activePin].filename
                     }
                     controls
                     controlsList="nodownload"

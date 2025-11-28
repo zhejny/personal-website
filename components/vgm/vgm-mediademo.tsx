@@ -1,9 +1,7 @@
+import { VgmDemo } from "@/lib/VgmDemos";
 import React from "react";
-import { VgmDemos } from "@/public/lib/data";
 
-type VgmDemoProps = (typeof VgmDemos)[number];
-
-function MediaDemo({ index, title, description, url }: VgmDemoProps) {
+function MediaDemo({ index, title, description, url }: VgmDemo) {
   return (
     <section className="vgm-demo">
       {/* Title & Description */}

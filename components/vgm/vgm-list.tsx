@@ -1,6 +1,6 @@
 import React from "react";
-import { VgmDemos } from "@/public/lib/data";
 import MediaDemo from "./vgm-mediademo";
+import { VgmDemos } from "@/lib/VgmDemos";
 
 function VgmList() {
   return (

@@ -40,7 +40,7 @@ export const instruments: InstrumentCollection = {
   klenang: {
     imgSrc: "/assets/images/metronome/klenang.png",
     samplePaths: ["/assets/audio/metronome/klenang.mp3"],
-    defaultAmp: 1,
+    defaultAmp: 0.8,
     pan: +0.15,
     highpass: 300,
     lowpass: 10000,
@@ -56,7 +56,7 @@ export const instruments: InstrumentCollection = {
   gentorag: {
     imgSrc: "/assets/images/metronome/gentorag.png",
     samplePaths: ["/assets/audio/metronome/gentorag.mp3"],
-    defaultAmp: 1,
+    defaultAmp: 0.6,
     pan: +0.25,
     highpass: 200,
     lowpass: 12000,
@@ -68,7 +68,7 @@ export const instruments: InstrumentCollection = {
       "/assets/audio/metronome/kecek_left.mp3",
       "/assets/audio/metronome/kecek_right_loud.mp3",
     ],
-    defaultAmp: 1,
+    defaultAmp: 0.8,
     pan: +0.4,
     highpass: 800,
     lowpass: 9000,
