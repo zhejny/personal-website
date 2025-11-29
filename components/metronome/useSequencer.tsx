@@ -16,7 +16,9 @@ export function useSequencer() {
 
   const masterGain = useRef<GainNode | null>(null);
   const masterCompressor = useRef<DynamicsCompressorNode | null>(null);
-  const schedulerId = useRef<number | null>(null);
+
+  // ⬇⬇⬇ NEW: Interval scheduler instead of RAF
+  const schedulerTimer = useRef<ReturnType<typeof setInterval> | null>(null);
 
   // SAMPLE-ACCURATE CLOCK
   const sampleCursor = useRef(0);
@@ -86,7 +88,6 @@ export function useSequencer() {
 
       // Clean envelope start
       ampGain.gain.setValueAtTime(0, startTime);
-
       ampGain.gain.linearRampToValueAtTime(1, startTime + attack);
       ampGain.gain.setValueAtTime(1, startTime + attack + sustain);
       ampGain.gain.linearRampToValueAtTime(0, startTime + attack + sustain + release);
@@ -123,13 +124,13 @@ export function useSequencer() {
   );
 
   // ----------------------------------------
-  // SAMPLE-ACCURATE SCHEDULER
+  // SAMPLE-ACCURATE SCHEDULER LOGIC
   // ----------------------------------------
   const scheduleStep = useCallback(() => {
     if (!audioCtx || !samples || !patternRef.current) return;
 
     const sampleRate = audioCtx.sampleRate;
-    const lookaheadSamples = Math.floor(sampleRate * 0.1); // 100ms
+    const lookaheadSamples = Math.floor(sampleRate * 0.1); // 100ms lookahead
 
     while (sampleCursor.current < audioCtx.currentTime * sampleRate + lookaheadSamples) {
       const startTime = sampleCursor.current / sampleRate;
@@ -145,8 +146,6 @@ export function useSequencer() {
           const buffer = samples[instrument][sampleIndex];
           if (!buffer) return;
 
-          // --- FIXED DURATION LOGIC ---
-          // durations[i] = ratio of a quarter note
           const durationRatio = part.durations?.[i] ?? 1;
           const durationSeconds = durationRatio * (60 / tempoRef.current);
 
@@ -167,11 +166,6 @@ export function useSequencer() {
     }
   }, [audioCtx, samples, playNote]);
 
-  const schedulerLoop = useCallback(() => {
-    scheduleStep();
-    schedulerId.current = requestAnimationFrame(schedulerLoop);
-  }, [scheduleStep]);
-
   // ----------------------------------------
   // TRANSPORT
   // ----------------------------------------
@@ -185,14 +179,21 @@ export function useSequencer() {
     fractionalStep.current = 0;
 
     setIsPlaying(true);
-    schedulerId.current = requestAnimationFrame(schedulerLoop);
-  }, [audioCtx, schedulerLoop]);
+
+    // ⬇⬇⬇ NEW: Fire scheduler from setInterval instead of RAF
+    schedulerTimer.current = setInterval(() => {
+      scheduleStep();
+    }, 25); // 25ms tick
+  }, [audioCtx, scheduleStep]);
 
   const stop = useCallback(() => {
     if (!audioCtx) return;
 
-    if (schedulerId.current) cancelAnimationFrame(schedulerId.current);
-    schedulerId.current = null;
+    // ⬇⬇⬇ NEW: Clear interval instead of cancelAnimationFrame
+    if (schedulerTimer.current) {
+      clearInterval(schedulerTimer.current);
+      schedulerTimer.current = null;
+    }
 
     const now = audioCtx.currentTime;
 
