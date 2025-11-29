@@ -19,6 +19,49 @@ export type Patterns = {
 };
 
 export const patterns: Patterns = {
+  "BARIS TUNGGAL": {
+    bapang: {
+      length: 32,
+      defaultTempo: 153,
+      instrumentParts: {
+        gong: {
+          onsets: [0],
+          durations: [8],
+        },
+        kempur: {
+          onsets: [8, 24],
+          durations: [4, 4],
+        },
+        klentong: {
+          onsets: [16],
+          durations: [8],
+        },
+        kempli: {
+          onsets: [0, 4, 8, 12, 16, 20, 24, 28],
+          durations: [1, 1, 1, 1, 1, 1, 1, 1],
+        },
+        gentorag: {
+          onsets: [0],
+          durations: [8],
+        },
+        kecek: {
+          onsets: Array.from({ length: 32 }, (_, i) => i),
+          durations: new Array(32).fill(0.5),
+          melody: Array.from({ length: 8 }, () => [0, 1, 2, 1]).flat(),
+        },
+        jublag: {
+          onsets: [0, 4, 8, 12, 16, 20, 24, 28],
+          durations: [1, 1, 1, 1, 1, 1, 1, 1],
+          melody: [2, 4, 5, 4, 2, 4, 0, 4],
+        },
+        jegogan: {
+          onsets: [0, 16, 24],
+          durations: [4, 2, 2],
+          melody: [2, 2, 0],
+        },
+      },
+    },
+  },
   BARONG: {
     baris: {
       length: 32,
@@ -409,5 +452,186 @@ export const patterns: Patterns = {
         },
       },
     },
+  },
+  "TARUNA JAYA": {
+    pengecet: {
+      length: 64,
+      defaultTempo: 144,
+      instrumentParts: {
+        gong: {
+          onsets: [0],
+          durations: [16],
+        },
+        klentong: {
+          onsets: [32],
+          durations: [16],
+        },
+        kempur: {
+          onsets: [16, 48],
+          durations: [32, 32],
+        },
+        kempli: {
+          onsets: [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60],
+          durations: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        },
+        gentorag: {
+          onsets: [0],
+          durations: [16],
+        },
+        kecek: {
+          onsets: Array.from({ length: 64 }, (_, i) => i),
+          durations: new Array(64).fill(0.5),
+          melody: Array.from({ length: 16 }, () => [0, 1, 2, 1]).flat(),
+        },
+        jublag: {
+          onsets: [0, 8, 16, 24, 32, 40, 48, 56],
+          durations: [2, 2, 2, 2, 2, 2, 2, 2],
+          melody: [4, 5, 1, 5, 4, 1, 2, 5],
+        },
+        jegogan: {
+          onsets: [0, 16, 32, 48],
+          durations: [4, 4, 4, 4],
+          melody: [4, 1, 4, 2],
+        },
+      },
+    },
+    pengipuk: {
+      length: 192,
+      defaultTempo: 126,
+      instrumentParts: {
+        gong: {
+          onsets: [0, 176],
+          durations: [48, 4],
+          melody: [0, 1],
+        },
+        klentong: {
+          onsets: [64, 128],
+          durations: [12, 12],
+        },
+        kempur: {
+          onsets: [32, 96, 160, 180, 188],
+          durations: [64, 64, 20, 8, 48],
+        },
+        kempli: {
+          onsets: Array.from({ length: 48 }, (_, i) => i * 4),
+          durations: Array(48).fill(1),
+        },
+        gentorag: {
+          onsets: [0],
+          durations: [48],
+        },
+        kecek: {
+          onsets: Array.from({ length: 192 }, (_, i) => i),
+          durations: new Array(192).fill(0.5),
+          melody: Array.from({ length: 48 }, () => [0, 1, 2, 1]).flat(),
+        },
+        jublag: {
+          onsets: [
+            0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120,
+            128, 136, 144, 152, 160, 168, 176, 184,
+          ],
+          durations: [
+            2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+            2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+            2, 2,
+          ],
+          melody: [
+            0, 1, 0, 4, 0, 1, 0, 4, 0, 1, 0, 2, 4, 5, 4, 1, 4, 5, 4, 1, 4, 1, 5,
+            1,
+          ],
+        },
+        jegogan: {
+          onsets: [0, 32, 64, 96, 128, 160],
+          durations: [8, 8, 8, 8, 8, 8],
+          melody: [0, 0, 0, 4, 4, 4],
+        },
+      },
+    },
+  },
+  GILAK: {
+    "8-beat": {
+      length: 32,
+      defaultTempo: 153,
+      instrumentParts: {
+        gong: {
+          onsets: [0, 16],
+          durations: [8, 8],
+          melody: [0, 1],
+        },
+        kempur: {
+          onsets: [20, 28],
+          durations: [2, 1],
+        },
+        kempli: {
+          onsets: [0, 4, 8, 12, 16, 20, 24, 28],
+          durations: [1, 1, 1, 1, 1, 1, 1, 1],
+        },
+        gentorag: {
+          onsets: [0],
+          durations: [8],
+        },
+        kecek: {
+          onsets: Array.from({ length: 32 }, (_, i) => i),
+          durations: new Array(32).fill(0.5),
+          melody: Array.from({ length: 8 }, () => [0, 1, 2, 1]).flat(),
+        },
+      },
+    },
+    "16-beat": {
+      length: 64,
+      defaultTempo: 144,
+      instrumentParts: {
+        gong: {
+          onsets: [0, 32],
+          durations: [16, 16],
+          melody: [0, 1],
+        },
+        kempur: {
+          onsets: [40, 56],
+          durations: [4, 3],
+        },
+        kempli: {
+          onsets: [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60],
+          durations: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        },
+        gentorag: {
+          onsets: [0],
+          durations: [16],
+        },
+        kecek: {
+          onsets: Array.from({ length: 64 }, (_, i) => i),
+          durations: new Array(64).fill(0.5),
+          melody: Array.from({ length: 16 }, () => [0, 1, 2, 1]).flat(),
+        },
+      },
+    },
+    "10-beat (ala Arnawa)": {
+      length: 40,
+      defaultTempo: 144,
+      instrumentParts: {
+        gong: {
+        onsets: [0, 20],
+        durations: [5, 5],
+        melody: [0, 1]
+      },
+      kempur: {
+        onsets: [28, 36],
+        durations: [2, 1],
+      },
+      kempli: {
+        onsets: [0,4,8,12,16,20,24,28,32,36],
+        durations: [1,1,1,1,1,1,1,1,1,1],
+      },
+      gentorag: {
+        onsets: [0],
+        durations: [10],
+      },
+      kecek: {
+          onsets: Array.from({ length: 40 }, (_, i) => i),
+          durations: new Array(40).fill(0.5),
+          melody: Array.from({ length: 10 }, () => [0, 1, 2, 1]).flat(),
+        },
+      }
+    }
   },
 };

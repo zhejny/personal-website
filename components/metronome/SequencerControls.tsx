@@ -8,7 +8,6 @@ import InstrumentToggle from "./InstrumentToggle";
 import { LoadingModal } from "./LoadingModal";
 import { useAudio } from "./AudioContextProvider";
 
-
 export default function SequencerControls() {
   const {
     isPlaying,
@@ -44,14 +43,23 @@ export default function SequencerControls() {
 
   return (
     <div className="text-center">
-
       {/* <h2 className="text-xl font-semibold mb-1">Kendang Metronome</h2> */}
 
       <LoadingModal isLoading={loading} progress={progress} />
 
-      <div className="text-md font-semibold h-6">
+      <div className="text-md font-semibold h-5">
         {selectedPiece || "\u00A0"}
       </div>
+
+      {/* <div className="h-6">
+        {selectedPiece ? (
+          <span className="text-md font-semibold">{selectedPiece}</span>
+        ) : (
+          <span className="text-md font-regular opacity-50">
+            a metronome practice aid for Balinese <i>kendang tunggal</i>
+          </span>
+        )}
+      </div> */}
 
       {/* Pattern Selector */}
       <select
@@ -129,9 +137,7 @@ export default function SequencerControls() {
               name={name}
               enabled={enabledInstruments[name] ?? false}
               inPattern={
-                currentPattern
-                  ? name in currentPattern.instrumentParts
-                  : false
+                currentPattern ? name in currentPattern.instrumentParts : false
               }
               toggle={toggleInstrument}
               imageSrc={instruments[name].imgSrc}
