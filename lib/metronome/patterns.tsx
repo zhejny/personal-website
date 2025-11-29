@@ -231,6 +231,49 @@ export const patterns: Patterns = {
         },
       },
     },
+    pengadeng: {
+      length: 128,
+      defaultTempo: 117,
+      instrumentParts: {
+        gong: {
+          onsets: [0],
+          durations: [32],
+        },
+        klentong: {
+          onsets: [64],
+          durations: [32],
+        },
+        klenang: {
+          onsets: [8, 24, 40, 56, 72, 88, 104, 120],
+          durations: [2, 2, 2, 2, 2, 2, 2, 2],
+        },
+        kempli: {
+          onsets: [0, 16, 32, 48, 64, 80, 96, 112],
+          durations: [4, 4, 4, 4, 4, 4, 4, 4],
+        },
+        gentorag: {
+          onsets: [0],
+          durations: [32],
+        },
+        kecek: {
+          onsets: Array.from({ length: 128 }, (_, i) => i),
+          durations: new Array(128).fill(0.5),
+          melody: Array.from({ length: 32 }, () => [0, 1, 2, 1]).flat(),
+        },
+        jublag: {
+          onsets: [
+            0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120,
+          ],
+          durations: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+          melody: [1, 5, 4, 0, 5, 4, 2, 4, 1, 2, 4, 0, 5, 1, 0, 2],
+        },
+        jegogan: {
+          onsets: [0, 32, 64, 96],
+          durations: [8, 8, 8, 8],
+          melody: [1, 5, 1, 5],
+        },
+      },
+    },
   },
   "KEBYAR DUDUK": {
     pengipuk: {
