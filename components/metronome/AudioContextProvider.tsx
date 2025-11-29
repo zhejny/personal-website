@@ -8,7 +8,7 @@ type AudioContextType = {
   samples: Record<string, AudioBuffer[]> | null;
   playSample: (name: string, index?: number) => void;
   loading: boolean;
-  progress: number; // 0–100
+  progress: number;
 };
 
 const AudioContextCtx = createContext<AudioContextType | undefined>(undefined);
@@ -38,7 +38,6 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     const loadSamples = async () => {
       const buffers: Record<string, AudioBuffer[]> = {};
 
-      // Count total samples for progress tracking
       let totalSamples = 0;
       Object.values(instruments).forEach((instr) => {
         totalSamples += instr.samplePaths.length;

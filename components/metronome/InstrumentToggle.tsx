@@ -38,7 +38,6 @@ export default function InstrumentToggle({
       style={{ "--img": `url(${imageSrc})` } as React.CSSProperties}
       title={name}
     >
-      {/* Inner image at 90% size */}
       <div
         className="
           w-[90%] h-[90%]
@@ -48,7 +47,6 @@ export default function InstrumentToggle({
         "
       />
 
-      {/* Name overlay */}
       <span
         className="
           absolute bottom-1

@@ -17,10 +17,8 @@ export function useSequencer() {
   const masterGain = useRef<GainNode | null>(null);
   const masterCompressor = useRef<DynamicsCompressorNode | null>(null);
 
-  // ⬇⬇⬇ NEW: Interval scheduler instead of RAF
   const schedulerTimer = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  // SAMPLE-ACCURATE CLOCK
   const sampleCursor = useRef(0);
   const samplesPerStep = useRef(0);
 
@@ -37,14 +35,12 @@ export function useSequencer() {
   useEffect(() => { enabledInstrumentsRef.current = enabledInstruments; }, [enabledInstruments]);
   useEffect(() => { patternRef.current = currentPatternState; }, [currentPatternState]);
 
-  // Recompute samples per step when tempo changes
   useEffect(() => {
     if (!audioCtx) return;
-    const secondsPerStep = 60 / tempo / 4; // 16th note
+    const secondsPerStep = 60 / tempo / 4;
     samplesPerStep.current = secondsPerStep * audioCtx.sampleRate;
   }, [tempo, audioCtx]);
 
-  // MASTER SIGNAL CHAIN
   useEffect(() => {
     if (!audioCtx) return;
 
@@ -70,9 +66,6 @@ export function useSequencer() {
     }
   }, [volume, audioCtx]);
 
-  // ----------------------------------------
-  // PLAY NOTE – CLICK-FREE ADSR
-  // ----------------------------------------
   const playNote = useCallback(
     (instrumentName: string, buffer: AudioBuffer, startTime: number, duration: number) => {
       if (!audioCtx || !masterGain.current) return;
@@ -86,7 +79,6 @@ export function useSequencer() {
       const release = 0.12;
       const sustain = Math.max(0, duration - attack - release);
 
-      // Clean envelope start
       ampGain.gain.setValueAtTime(0, startTime);
       ampGain.gain.linearRampToValueAtTime(1, startTime + attack);
       ampGain.gain.setValueAtTime(1, startTime + attack + sustain);
@@ -123,14 +115,11 @@ export function useSequencer() {
     [audioCtx]
   );
 
-  // ----------------------------------------
-  // SAMPLE-ACCURATE SCHEDULER LOGIC
-  // ----------------------------------------
   const scheduleStep = useCallback(() => {
     if (!audioCtx || !samples || !patternRef.current) return;
 
     const sampleRate = audioCtx.sampleRate;
-    const lookaheadSamples = Math.floor(sampleRate * 0.1); // 100ms lookahead
+    const lookaheadSamples = Math.floor(sampleRate * 0.1);
 
     while (sampleCursor.current < audioCtx.currentTime * sampleRate + lookaheadSamples) {
       const startTime = sampleCursor.current / sampleRate;
@@ -166,9 +155,6 @@ export function useSequencer() {
     }
   }, [audioCtx, samples, playNote]);
 
-  // ----------------------------------------
-  // TRANSPORT
-  // ----------------------------------------
   const start = useCallback(async () => {
     if (!audioCtx || !patternRef.current) return;
 
@@ -180,16 +166,15 @@ export function useSequencer() {
 
     setIsPlaying(true);
 
-    // ⬇⬇⬇ NEW: Fire scheduler from setInterval instead of RAF
+
     schedulerTimer.current = setInterval(() => {
       scheduleStep();
-    }, 25); // 25ms tick
+    }, 25);
   }, [audioCtx, scheduleStep]);
 
   const stop = useCallback(() => {
     if (!audioCtx) return;
 
-    // ⬇⬇⬇ NEW: Clear interval instead of cancelAnimationFrame
     if (schedulerTimer.current) {
       clearInterval(schedulerTimer.current);
       schedulerTimer.current = null;
@@ -213,9 +198,6 @@ export function useSequencer() {
     setIsPlaying(false);
   }, [audioCtx]);
 
-  // ----------------------------------------
-  // LOAD PATTERN
-  // ----------------------------------------
   const loadPattern = useCallback(
     (pattern: Pattern) => {
       const now = audioCtx?.currentTime ?? 0;
@@ -250,9 +232,6 @@ export function useSequencer() {
     [audioCtx]
   );
 
-  // ----------------------------------------
-  // TOGGLE INSTRUMENT
-  // ----------------------------------------
   const toggleInstrument = useCallback(
     (name: string) => {
       setEnabledInstruments((prev) => {

@@ -51,17 +51,6 @@ export default function SequencerControls() {
         {selectedPiece || "\u00A0"}
       </div>
 
-      {/* <div className="h-6">
-        {selectedPiece ? (
-          <span className="text-md font-semibold">{selectedPiece}</span>
-        ) : (
-          <span className="text-md font-regular opacity-50">
-            a metronome practice aid for Balinese <i>kendang tunggal</i>
-          </span>
-        )}
-      </div> */}
-
-      {/* Pattern Selector */}
       <select
         value={selected}
         onChange={handlePatternChange}
@@ -81,7 +70,6 @@ export default function SequencerControls() {
         ))}
       </select>
 
-      {/* Transport */}
       <div className="mt-3">
         <button
           onClick={isPlaying ? stop : start}
@@ -92,7 +80,6 @@ export default function SequencerControls() {
         </button>
       </div>
 
-      {/* Tempo Control */}
       <div className="mt-3">
         <label className="block">
           <strong>Tempo:</strong> {Math.round(tempo)} BPM
@@ -108,7 +95,6 @@ export default function SequencerControls() {
         />
       </div>
 
-      {/* Volume Control */}
       <div className="mt-1">
         <label className="block">
           <strong>Volume:</strong> {(volume * 100).toFixed(0)}%
@@ -124,7 +110,6 @@ export default function SequencerControls() {
         />
       </div>
 
-      {/* Instrument Toggles */}
       <div className="mt-1">
         <label className="block mb-2">
           <strong>Instruments</strong>
