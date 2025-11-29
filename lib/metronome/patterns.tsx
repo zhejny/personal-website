@@ -233,7 +233,7 @@ export const patterns: Patterns = {
     },
     pengadeng: {
       length: 128,
-      defaultTempo: 117,
+      defaultTempo: 126,
       instrumentParts: {
         gong: {
           onsets: [0],
@@ -271,6 +271,92 @@ export const patterns: Patterns = {
           onsets: [0, 32, 64, 96],
           durations: [8, 8, 8, 8],
           melody: [1, 5, 1, 5],
+        },
+      },
+    },
+  },
+  "JAUK MANIS": {
+    bapang: {
+      length: 64,
+      defaultTempo: 135,
+      instrumentParts: {
+        gong: {
+          onsets: [0],
+          durations: [16],
+        },
+        klentong: {
+          onsets: [32],
+          durations: [16],
+        },
+        klenang: {
+          onsets: [4, 12, 20, 28, 36, 44, 52, 60],
+          durations: [1, 1, 1, 1, 1, 1, 1, 1],
+        },
+        kempli: {
+          onsets: [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60],
+          durations: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        },
+        gentorag: {
+          onsets: [0],
+          durations: [16],
+        },
+        kecek: {
+          onsets: Array.from({ length: 64 }, (_, i) => i),
+          durations: new Array(64).fill(0.5),
+          melody: Array.from({ length: 16 }, () => [0, 1, 2, 1]).flat(),
+        },
+        jublag: {
+          onsets: [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60],
+          durations: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+          melody: [4, 2, 5, 2, 4, 2, 5, 2, 0, 1, 2, 0, 1, 4, 5, 2],
+        },
+        jegogan: {
+          onsets: [0, 16, 32, 48],
+          durations: [4, 4, 4, 4],
+          melody: [4, 4, 0, 1],
+        },
+      },
+    },
+    pengadeng: {
+      length: 128,
+      defaultTempo: 117,
+      instrumentParts: {
+        gong: {
+          onsets: [0],
+          durations: [32],
+        },
+        klentong: {
+          onsets: [64],
+          durations: [32],
+        },
+        klenang: {
+          onsets: [8, 24, 40, 56, 72, 88, 104, 120],
+          durations: [2, 2, 2, 2, 2, 2, 2, 2],
+        },
+        kempli: {
+          onsets: [0, 16, 32, 48, 64, 80, 96, 112],
+          durations: [4, 4, 4, 4, 4, 4, 4, 4],
+        },
+        gentorag: {
+          onsets: [0],
+          durations: [32],
+        },
+        kecek: {
+          onsets: Array.from({ length: 128 }, (_, i) => i),
+          durations: new Array(128).fill(0.5),
+          melody: Array.from({ length: 32 }, () => [0, 1, 2, 1]).flat(),
+        },
+        jublag: {
+          onsets: [
+            0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120,
+          ],
+          durations: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+          melody: [4, 2, 5, 2, 4, 2, 5, 2, 0, 1, 2, 0, 1, 4, 5, 2],
+        },
+        jegogan: {
+          onsets: [0, 32, 64, 96],
+          durations: [8, 8, 8, 8],
+          melody: [4, 4, 0, 1],
         },
       },
     },
